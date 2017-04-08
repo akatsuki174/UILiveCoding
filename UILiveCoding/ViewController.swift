@@ -42,12 +42,12 @@ class ViewController: UIViewController {
     @IBAction func resetTimer(_ sender: Any) {
         timer.invalidate()
         count = 0.0
-        timerLabel.text = "".appendingFormat("%.1f", count)
+        timerLabel.text = String(format: "%.1f", count)
     }
     
     @objc private func updateTimer() {
         count += 0.1
-        timerLabel.text = "".appendingFormat("%.1f", count)
+        timerLabel.text = String(format: "%.1f", count)
     }
     
 }
